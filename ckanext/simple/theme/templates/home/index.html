@@ -1,0 +1,81 @@
+{% ckan_extends %}
+
+{% block content %}
+  <div class="homepage">
+    <div class="container">
+      {{ self.flash() }}
+    </div>
+    {% block primary_content %}
+      <div role="main" class="hero">
+        <div class="container">
+          <div class="row row1">
+            <div class="span12">
+              <h1 class="page-heading">{{ _("Welcome to CKAN") }}</h1>
+              <p>
+                {% trans %}This is a nice introductory paragraph about CKAN or the site
+                in general. We don't have any copy to go here yet but soon we will
+                {% endtrans %}
+              </p>
+              <a class="btn btn-large btn-inverse" href="about">{{ _("Learn More") }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div role="main">
+        <div class="container">
+          <ul class="boxes row">
+            {% set stats = h.get_site_statistics() %}
+            <li class="data span4">
+            <a href="dataset">
+              <h3>{{ _("Browse") }} {{ _('dataset') if stats.dataset_count == 1 else _('datasets') }}</h3>
+              <p>{{ _("Browse, search and filter all datasets") }}</p>
+              <span class="count label">{{ h.SI_number_span(stats.dataset_count) }}</span>
+            </a>
+            </li>
+            <li class="orgs span4">
+            <a href="organization">
+              <h3>{{ _("Browse") }} {{ _('organization') if stats.organization_count == 1 else _('organizations') }}</h3>
+              <p>{{ _("Browse collections of datasets") }}</p>
+              <span class="count label">{{ h.SI_number_span(stats.organization_count) }}</span>
+            </a>
+            </li>
+            <li class="groups span4">
+            <a href="group">
+              <h3>{{ _("Browse") }} {{ _('group') if stats.group_count == 1 else _('groups') }}</h3>
+              <p>{{ _("Browse collections of datasets") }}</p>
+              <span class="count label">{{ h.SI_number_span(stats.group_count) }}</span>
+            </a>
+            </li>
+          </ul>
+          
+          {% if c.userobj %}
+          <ul class="boxes row">
+            <li class="add-data span4">
+              <a href="dataset/new">
+                <h3>{{ _("Add Dataset") }}</h3>
+                <p>{{ _("Create a new collection of data files") }}</p>
+              </a>
+            </li>
+
+            <li class="profile span4">
+              <a href="{{ h.url_for(controller='user', action='read', id=c.userobj.name) }}">
+                <h3>{{ _("User Profile") }}</h3>
+                <p>{{ _("View and manage your profile") }}</p>
+              </a>
+            </li>
+
+            <li class="dashboard span4">
+              <a href="{{ h.url_for(controller='user', action='dashboard') }}">
+                <h3>{{ _("Dashboard") }}</h3>
+                <p>{{ _("Newsfeed, your datasets and groups") }}</p>
+                {% set new_activities = h.new_activities() %}
+                <span class="activities">{% if new_activities > 0 %}{{ new_activities }}{% else %}<i class="icon-check-sign"></i>{% endif %}</span>
+              </a>
+            </li>
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+{% endblock %}

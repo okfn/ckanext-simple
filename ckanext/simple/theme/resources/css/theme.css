@@ -1,0 +1,363 @@
+body,
+.account-masthead,
+.masthead,
+.hero,
+[role="main"],
+.main,
+.site-footer {
+  background-image: none;
+}
+body {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000;
+}
+.nav-pills > li > a {
+  border-radius: 0;
+}
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover,
+.nav-pills > .active > a:focus {
+  background-color: #eeeeee;
+  color: #000;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: #c8c8c8;
+}
+.btn {
+  background-image: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.btn-primary {
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
+}
+.btn-primary.btn:hover,
+.btn-primary.btn:focus,
+.btn-primary.btn-primary:hover,
+.btn-primary.btn-primary:focus,
+.btn-primary.btn-primary:active,
+.btn-primary.btn-primary.active,
+.btn-primary.btn-primary.disabled,
+.btn-primary.btn-primary[disabled] {
+  color: #ffffff;
+  background-color: #000000;
+}
+.btn-inverse {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+}
+.btn-inverse.btn:hover,
+.btn-inverse.btn:focus,
+.btn-inverse.btn-primary:hover,
+.btn-inverse.btn-primary:focus,
+.btn-inverse.btn-primary:active,
+.btn-inverse.btn-primary.active,
+.btn-inverse.btn-primary.disabled,
+.btn-inverse.btn-primary[disabled] {
+  color: #000000;
+  background-color: #ffffff;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+h1 {
+  font-size: 50px;
+}
+a,
+a:hover,
+a:focus {
+  color: #000000;
+  text-decoration: underline;
+}
+.account-masthead {
+  background-color: #000000;
+  color: #fff;
+}
+.account-masthead .account ul li {
+  border-color: #000000;
+}
+.account-masthead .account ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.account-masthead .account ul li a:hover {
+  background-color: #333333;
+  color: #fff;
+}
+.account-masthead .account ul li a span {
+  padding: 0;
+  margin: 0;
+}
+.account-masthead .account ul li.admin-settings {
+  border-color: #333333;
+}
+.account-masthead .account ul li.admin-settings .text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.account-masthead .account ul li.user {
+  border-color: #333333;
+}
+.account-masthead .account ul li.notifications a span,
+.account-masthead .account ul li.notifications a:hover span {
+  background-color: inherit;
+  color: inherit;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+}
+.account-masthead .account ul li.notifications a .badge {
+  border-radius: 8px;
+  display: none;
+}
+.account-masthead .account ul li.notifications i {
+  display: none;
+}
+.account-masthead .account ul li.notifications.notifications-important a span,
+.account-masthead .account ul li.notifications.notifications-important a:hover span {
+  background-color: inherit;
+  color: inherit;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+}
+.account-masthead .account ul li.notifications.notifications-important a .badge {
+  display: inline;
+  background-color: #ffffff;
+  color: #000000;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.account-masthead .account ul li.account-info i {
+  display: none;
+}
+.account-masthead .account ul li.log-out i {
+  display: none;
+}
+.account-masthead .account.authed .image img {
+  border-radius: 0;
+}
+.masthead {
+  background-color: #ffffff;
+  color: #000000;
+}
+.masthead a {
+  color: #000000;
+}
+.masthead .logo {
+  display: block;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-decoration: none;
+}
+.masthead .logo h1,
+.masthead .logo h2 {
+  float: none;
+  position: relative;
+  text-transform: none;
+  margin: 0;
+  line-height: 1;
+}
+.masthead .logo h1 {
+  font-weight: normal;
+  font-size: 50px;
+}
+.masthead .logo h2 {
+  font-size: 17px;
+  font-weight: 300;
+  margin-top: 5px;
+}
+.main-nav {
+  background-color: #dadada;
+}
+.main-nav .site-search {
+  background-color: #000000;
+  margin: 0;
+}
+.main-nav .site-search.in {
+  border-bottom: solid 2px #ffffff;
+}
+.main-nav .site-search input {
+  margin: 0;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 15px 0;
+  border-radius: 0;
+}
+.main-nav .site-search input:focus {
+  box-shadow: none;
+}
+.main-nav .site-search .btn-search {
+  display: none;
+}
+.main-nav .search-toggle {
+  float: right;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  text-align: center;
+  padding: 0;
+}
+.main-nav .search-toggle i {
+  font-size: 20px;
+}
+.main-nav .search-toggle .text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.main-nav .search-toggle.collapsed {
+  background-color: #bbbbbb;
+}
+.main-nav .nav {
+  margin: 0 0 0 -12px;
+  font-size: 16px;
+}
+.main-nav .nav > li > a {
+  margin: 0;
+  height: 50px;
+  line-height: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #000;
+  text-decoration: none;
+}
+html,
+.site-footer {
+  background-color: #eeeeee;
+  border-top: solid 2px #000000;
+}
+.homepage .site-search.in {
+  border-bottom: solid 2px #ffffff;
+}
+.homepage .hero {
+  background-color: #000000;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  color: #fff;
+}
+.homepage .hero h1 {
+  margin-bottom: 0;
+}
+.homepage .hero p {
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.homepage .hero .btn {
+  margin-bottom: 10px;
+}
+.homepage .boxes {
+  margin-right: -2px;
+  margin-bottom: 20px;
+}
+.homepage .boxes li {
+  display: table;
+}
+.homepage .boxes li a {
+  background-color: #000000;
+  height: 185px;
+  text-decoration: none;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 125px;
+  padding-right: 20px;
+  border-right: solid 10px #000000;
+  background-image: url(../img/box-icons.png);
+  background-size: auto 182px;
+  background-position: -25px center;
+}
+.homepage .boxes li a h3 {
+  background-color: #ffffff;
+  margin-bottom: 0;
+}
+.homepage .boxes li a p {
+  background-color: #ffffff;
+}
+.homepage .boxes li a .count {
+  display: none;
+}
+.homepage .boxes li.data a {
+  background-position: -525px center;
+}
+.homepage .boxes li.orgs a {
+  background-position: -1025px center;
+}
+.homepage .boxes li.profile a {
+  background-position: -1525px center;
+}
+.homepage .boxes li.add-data a {
+  background-position: -2050px center;
+}
+.homepage .boxes li.add-org a {
+  background-position: -2550px center;
+}
+.homepage .boxes li.dashboard a {
+  background-position: -3050px center;
+  position: relative;
+}
+.homepage .boxes li.dashboard a .activities {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  top: 57px;
+  left: 40px;
+  font-size: 48px;
+  font-weight: 700;
+  overflow: hidden;
+}
+.homepage .boxes li.dashboard a .activities i {
+  font-size: 60px;
+  display: block;
+  background-color: #000000;
+  color: #ffffff;
+  height: 38px;
+  width: 45px;
+  line-height: 0.7;
+  margin: 15px 0 0 10px;
+}
+.homepage .boxes li.groups a {
+  background-position: -3525px center;
+}
