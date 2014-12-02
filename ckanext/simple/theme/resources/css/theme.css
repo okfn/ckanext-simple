@@ -9,7 +9,7 @@ body,
 }
 body {
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #000;
+  color: #000000;
 }
 .nav-pills > li > a {
   border-radius: 0;
@@ -18,7 +18,7 @@ body {
 .nav-pills > .active > a:hover,
 .nav-pills > .active > a:focus {
   background-color: #eeeeee;
-  color: #000;
+  color: #000000;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -231,6 +231,7 @@ a:focus {
   width: 50px;
   text-align: center;
   padding: 0;
+  outline: none;
 }
 .main-nav .search-toggle i {
   font-size: 20px;
@@ -258,13 +259,33 @@ a:focus {
   line-height: 50px;
   padding-top: 0;
   padding-bottom: 0;
-  color: #000;
+  color: #000000;
   text-decoration: none;
 }
 html,
 .site-footer {
   background-color: #eeeeee;
   border-top: solid 2px #000000;
+  color: #333333;
+}
+html a,
+.site-footer a {
+  text-decoration: none;
+  color: #333333;
+}
+html a:hover,
+.site-footer a:hover {
+  color: #000000;
+}
+html small,
+.site-footer small,
+html label,
+.site-footer label {
+  color: #333333;
+}
+html .attribution .ckan-footer-logo,
+.site-footer .attribution .ckan-footer-logo {
+  background-size: contain;
 }
 .homepage .site-search.in {
   border-bottom: solid 2px #ffffff;

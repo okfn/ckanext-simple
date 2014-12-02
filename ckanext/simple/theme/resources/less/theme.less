@@ -6,6 +6,7 @@
 @primary: #000;
 @secondary: #EEEEEE;
 @bg: #fff;
+@text-colour: @primary;
 
 
 //reset
@@ -21,7 +22,7 @@ body,
 
 body {
   font-family:Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#000;
+  color:@text-colour;
 }
 
 .nav-pills > li > a {
@@ -32,7 +33,7 @@ body {
 .nav-pills > .active > a:hover,
 .nav-pills > .active > a:focus {
   background-color: @secondary;
-  color:#000;
+  color:@text-colour;
 }
 
 .nav > li > a:hover,
@@ -74,7 +75,7 @@ body {
 }
 
 .btn-inverse {
-  .btn-colour(#fff, #000);
+  .btn-colour(#fff, @text-colour);
 }
 
 
@@ -282,6 +283,7 @@ a:focus {
     width:50px;
     text-align:center;
     padding:0;
+    outline: none;
     
     i {
       font-size:20px;
@@ -306,7 +308,7 @@ a:focus {
       line-height:50px;
       padding-top:0;
       padding-bottom:0;
-      color:#000;
+      color:@text-colour;
       text-decoration:none;
     }
   }
@@ -317,8 +319,28 @@ a:focus {
 
 html,
 .site-footer {
+  @footer-text-colour: lighten(@text-colour, 20%);
   background-color:@secondary;
   border-top:solid 2px @primary;
+  color:@footer-text-colour;
+  
+  a {
+    text-decoration:none;
+    color:@footer-text-colour;
+    
+    &:hover {
+      color:@text-colour;
+    }
+  }
+  
+  small,
+  label {
+    color:@footer-text-colour;
+  }
+  
+  .attribution .ckan-footer-logo {
+    background-size:contain;
+  }
 }
 
 
