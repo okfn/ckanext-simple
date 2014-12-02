@@ -5,6 +5,7 @@
 
 @primary: #000;
 @secondary: #EEEEEE;
+@tertiary: #6f8890;
 @bg: #fff;
 @text-colour: @primary;
 
@@ -23,6 +24,7 @@ body,
 body {
   font-family:Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:@text-colour;
+  overflow-x: hidden;
 }
 
 .nav-pills > li > a {
@@ -103,11 +105,20 @@ h1 {
   font-size:50px;
 }
 
-a,
+a {
+  color:@primary;
+}
 a:hover,
 a:focus {
-  color:@primary;
-  text-decoration: underline;
+  color:@tertiary;
+}
+
+p {
+  a,
+  a:hover,
+  a:focus {
+    text-decoration:underline;
+  }
 }
 
 
@@ -319,8 +330,10 @@ a:focus {
 
 html,
 .site-footer {
-  @footer-text-colour: lighten(@text-colour, 20%);
   background-color:@secondary;
+}
+.site-footer {
+  @footer-text-colour: lighten(@text-colour, 20%);
   border-top:solid 2px @primary;
   color:@footer-text-colour;
   
@@ -340,6 +353,113 @@ html,
   
   .attribution .ckan-footer-logo {
     background-size:contain;
+  }
+}
+
+
+[role="main"],
+.main {
+  padding:0;
+}
+
+
+.toolbar {
+  background-color:@primary;
+  position:relative;
+  height:26px;
+  margin:0;
+  padding: 12px 0;
+  color:#fff;
+  
+  &:before,
+  &:after {
+    content:'';
+    display:block;
+    top:0;
+    bottom:0;
+    position:absolute;
+    width:9999px;
+    background-color:@primary;
+  }
+  
+  &:before {
+    right:0;
+  }
+  
+  &:after {
+    left:100%;
+  }
+  
+  .breadcrumb {
+    font-size:18px;
+    
+    & > li {
+      text-shadow: none;
+      
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.wrapper {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  position:relative;
+  background:none;
+  z-index:1;
+  margin-bottom:0;
+  
+  .primary {
+    background-color:#fff;
+    padding-top:10px;
+    
+    &:before {
+      display:block;
+      content:'';
+      background-color:#fff;
+      position:absolute;
+      left:220px;
+      top:0;
+      bottom:0;
+      width:99999px;
+      z-index:-1;
+      border-left:solid 1px #dddddd;
+    }
+    
+    .module-content {
+      padding-right:0;
+    }
+  }
+  
+  .secondary {
+    padding-top:30px;
+    
+    .nav > li > a:hover,
+    .nav > li > a:focus {
+      color:@text-colour;
+    }
+    
+    .nav-item.active > a,
+    .nav-aside li.active a {
+      background-color: @tertiary;
+      
+      &:hover {
+        color:#fff;
+      }
+      
+      &:before {
+        background-image:none;
+        width: 0; 
+        height: 0; 
+        border-top: 17px solid transparent;
+        border-bottom: 17px solid transparent;
+        border-left: 12px solid @tertiary;
+        right:-12px;
+      }
+    }
   }
 }
 

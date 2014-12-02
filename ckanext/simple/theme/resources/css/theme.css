@@ -10,6 +10,7 @@ body,
 body {
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #000000;
+  overflow-x: hidden;
 }
 .nav-pills > li > a {
   border-radius: 0;
@@ -87,10 +88,16 @@ h6 {
 h1 {
   font-size: 50px;
 }
-a,
+a {
+  color: #000000;
+}
 a:hover,
 a:focus {
-  color: #000000;
+  color: #6f8890;
+}
+p a,
+p a:hover,
+p a:focus {
   text-decoration: underline;
 }
 .account-masthead {
@@ -265,27 +272,114 @@ a:focus {
 html,
 .site-footer {
   background-color: #eeeeee;
+}
+.site-footer {
   border-top: solid 2px #000000;
   color: #333333;
 }
-html a,
 .site-footer a {
   text-decoration: none;
   color: #333333;
 }
-html a:hover,
 .site-footer a:hover {
   color: #000000;
 }
-html small,
 .site-footer small,
-html label,
 .site-footer label {
   color: #333333;
 }
-html .attribution .ckan-footer-logo,
 .site-footer .attribution .ckan-footer-logo {
   background-size: contain;
+}
+[role="main"],
+.main {
+  padding: 0;
+}
+.toolbar {
+  background-color: #000000;
+  position: relative;
+  height: 26px;
+  margin: 0;
+  padding: 12px 0;
+  color: #fff;
+}
+.toolbar:before,
+.toolbar:after {
+  content: '';
+  display: block;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 9999px;
+  background-color: #000000;
+}
+.toolbar:before {
+  right: 0;
+}
+.toolbar:after {
+  left: 100%;
+}
+.toolbar .breadcrumb {
+  font-size: 18px;
+}
+.toolbar .breadcrumb > li {
+  text-shadow: none;
+}
+.toolbar .breadcrumb > li a {
+  color: #fff;
+}
+.wrapper {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  position: relative;
+  background: none;
+  z-index: 1;
+  margin-bottom: 0;
+}
+.wrapper .primary {
+  background-color: #fff;
+  padding-top: 10px;
+}
+.wrapper .primary:before {
+  display: block;
+  content: '';
+  background-color: #fff;
+  position: absolute;
+  left: 220px;
+  top: 0;
+  bottom: 0;
+  width: 99999px;
+  z-index: -1;
+  border-left: solid 1px #dddddd;
+}
+.wrapper .primary .module-content {
+  padding-right: 0;
+}
+.wrapper .secondary {
+  padding-top: 30px;
+}
+.wrapper .secondary .nav > li > a:hover,
+.wrapper .secondary .nav > li > a:focus {
+  color: #000000;
+}
+.wrapper .secondary .nav-item.active > a,
+.wrapper .secondary .nav-aside li.active a {
+  background-color: #6f8890;
+}
+.wrapper .secondary .nav-item.active > a:hover,
+.wrapper .secondary .nav-aside li.active a:hover {
+  color: #fff;
+}
+.wrapper .secondary .nav-item.active > a:before,
+.wrapper .secondary .nav-aside li.active a:before {
+  background-image: none;
+  width: 0;
+  height: 0;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  border-left: 12px solid #6f8890;
+  right: -12px;
 }
 .homepage .site-search.in {
   border-bottom: solid 2px #ffffff;
