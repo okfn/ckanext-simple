@@ -361,6 +361,10 @@ html,
   
   .attribution .ckan-footer-logo {
     background-size:contain;
+    
+    .ie & {
+      background-image:url(../img/ckan-logo-footer-small.png);
+    }
   }
 }
 
@@ -662,6 +666,10 @@ html,
         background-image:url(../img/box-icons.png);
         background-size:auto 182px;
         background-position: -25px center;
+        
+        .ie & {
+          background-image:url(../img/box-icons-small.png);
+        }
         
         &:hover {
           background-color:@link-colour;

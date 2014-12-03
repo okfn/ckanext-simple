@@ -298,6 +298,9 @@ html,
 .site-footer .attribution .ckan-footer-logo {
   background-size: contain;
 }
+.ie .site-footer .attribution .ckan-footer-logo {
+  background-image: url(../img/ckan-logo-footer-small.png);
+}
 [role="main"],
 .main {
   padding: 0;
@@ -545,6 +548,9 @@ html,
   background-image: url(../img/box-icons.png);
   background-size: auto 182px;
   background-position: -25px center;
+}
+.ie .homepage .boxes li a {
+  background-image: url(../img/box-icons-small.png);
 }
 .homepage .boxes li a:hover {
   background-color: #2fa9d0;
