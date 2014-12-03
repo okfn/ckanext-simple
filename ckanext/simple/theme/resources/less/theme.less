@@ -8,7 +8,7 @@
 @tertiary: #6f8890;
 @bg: #fff;
 @text-colour: @primary;
-
+@link-colour: saturate(@tertiary, 50%);
 
 //reset
 
@@ -110,7 +110,7 @@ a {
 }
 a:hover,
 a:focus {
-  color:@tertiary;
+  color:@link-colour;
 }
 
 p {
@@ -513,6 +513,11 @@ html,
         background-image:url(../img/box-icons.png);
         background-size:auto 182px;
         background-position: -25px center;
+        
+        &:hover {
+          background-color:@link-colour;
+          border-right-color:@link-colour;
+        }
         
         h3 {
           background-color:@bg;
